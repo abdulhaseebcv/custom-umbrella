@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+   background: var(--background);
+}
+
+:root {
+    --umbrella-color: url('assets/images/Pink umbrella.png');
+    --color-border: pink;
+    --upload-border: #db518b;
+    --background:#ffdfec;
+}
+
+.blue-umbrella {
+    --umbrella-color: url('assets/images/Blue umbrella.png');
+    --color-border: #87cefa;
+    --upload-border: #25b0e4;
+    ;
+}
+
+.yellow-umbrella {
+    --umbrella-color: url('assets/images/Yellow umbrella.png');
+    --color-border: #FFFFE0;
+    --upload-border: #fdd041;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.umbrella-image {
+    content: var(--umbrella-color);
+    height: 23rem;
+    margin-top: 6.25rem;
+}
+
+.customize-section {
+    color: black;
+    flex-basis: 30%;
+    margin-top: 3rem;
+}
+.heading{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.colors{
+    margin-top: 2rem;
+}
+
+.color-icon-pink {
+    border: 4px solid;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #db518b;
+    cursor: pointer;
+}
+
+.color-icon-blue {
+    border: 4px solid;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #25b0e4;
+    cursor: pointer;
+    margin-left: .6rem;
+}
+
+.color-icon-yellow {
+    border: 4px solid;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fdd041;
+    cursor: pointer;
+    margin-left: .6rem;
+}
+
+.upload-section{
+    margin-top: 2rem;
+}
+
+.upload-section p{
+    margin-top: 3px;
+}
+.file-type{
+    font-size: 14px;
+    margin: 6px;
+}
+
+.upload-file{
+    width: 20.1rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    background: var(--upload-border);
+    color: white;
+}
+
+.upload-icon{
+    background: var(--upload-border);
+}
+
+.upload-logo-text{
+    margin: auto;
+    background: var(--upload-border);
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
