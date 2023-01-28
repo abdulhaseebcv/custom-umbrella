@@ -111,8 +111,8 @@ body {
     transform: translate(-50%, -50%);
     background-position: center;
     background-size: cover;
-    width: 4rem;
-    height: 1rem;
+    width: 5rem;
+    height: 2rem;
     position: absolute;
 }
 
