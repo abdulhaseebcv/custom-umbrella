@@ -6,31 +6,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Umbrella</title>
+
+  <!-- Title icon -->
   <link rel="icon" type="image/x-icon" href="assets/images/title-icon.png">
+
+  <!-- Font-awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <!-- Section -->
   <section>
     <div class="content">
+
+      <!-- Umbrella image  -->
       <div class="image-section">
         <img id="loader" src="assets/images/loader_icon.svg" alt="" srcset="">
         <img id="umbrella-image" src="assets/images/Pink umbrella.png" alt="umbrella-image">
         <div id="logo"></div>
       </div>
+
+      <!-- Umbrella customize -->
       <div class="customize-section">
         <h1 class="heading">Custom Umbrella</h1>
+
+        <!-- Color switch icons -->
         <div class="color-icon">
-          <span id="pink-border" class="active" onclick="colorSwitch('#ffdfec','#db518b','assets/images/Pink umbrella.png')"
+          <span id="pink-border" class="active"
+            onclick="colorSwitch('#ffdfec','#db518b','assets/images/Pink umbrella.png')"
             style="background:#db518b ;"></span>
           <span id="blue-border" onclick="colorSwitch('#e6f6fc','#25b0e4','assets/images/Blue umbrella.png')"
             style="background:#25b0e4 ;"></span>
           <span id="yellow-border" onclick="colorSwitch('#fffaed','#fdd041','assets/images/Yellow umbrella.png')"
             style="background:#fdd041 ;"></span>
         </div>
+
+        <!-- Upload logo -->
         <div class="upload-section">
           <h4>Customize your umbrella</h4>
           <p>Upload a logo for an instant preview</p>
@@ -45,10 +62,13 @@
             <i id="remove-logo" style="display: none;" onclick="removeLogo()" class="fa-solid fa-xmark"></i>
           </div>
         </div>
+        
       </div>
     </div>
   </section>
+  <!-- End Section -->
 
+  <!-- Main JS file -->
   <script src="script.js"></script>
 </body>
 
