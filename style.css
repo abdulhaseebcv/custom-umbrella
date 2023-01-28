@@ -3,28 +3,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito Sans", sans-serif;
-   background: var(--background);
 }
 
 :root {
     --umbrella-color: url('assets/images/Pink umbrella.png');
-    --color-border: pink;
     --upload-border: #db518b;
-    --background:#ffdfec;
+    --background: #ffdfec;
 }
 
-.blue-umbrella {
-    --umbrella-color: url('assets/images/Blue umbrella.png');
-    --color-border: #87cefa;
-    --upload-border: #25b0e4;
-    ;
+body {
+    background: var(--background);
 }
 
-.yellow-umbrella {
-    --umbrella-color: url('assets/images/Yellow umbrella.png');
-    --color-border: #FFFFE0;
-    --upload-border: #fdd041;
-}
 
 .content {
     display: flex;
@@ -32,9 +22,12 @@
     justify-content: space-around;
 }
 
-.umbrella-image {
-    content: var(--umbrella-color);
-    height: 23rem;
+.image-section {
+    position: relative;
+}
+
+#umbrella-image {
+    height: 24rem;
     margin-top: 6.25rem;
 }
 
@@ -43,60 +36,53 @@
     flex-basis: 30%;
     margin-top: 3rem;
 }
-.heading{
+
+.heading {
     font-size: 2.5rem;
     font-weight: bold;
 }
-.colors{
+
+.color-icon {
     margin-top: 2rem;
 }
 
-.color-icon-pink {
-    border: 4px solid;
+.color-icon span {
     height: 30px;
     width: 30px;
     border-radius: 50%;
     display: inline-block;
-    background-color: #db518b;
     cursor: pointer;
 }
 
-.color-icon-blue {
-    border: 4px solid;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: #25b0e4;
-    cursor: pointer;
-    margin-left: .6rem;
+.color-icon span.active{
+    border: 4px solid #FFB6C1;
 }
 
-.color-icon-yellow {
-    border: 4px solid;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: #fdd041;
-    cursor: pointer;
-    margin-left: .6rem;
-}
-
-.upload-section{
+.upload-section {
     margin-top: 2rem;
 }
 
-.upload-section p{
+.upload-section p {
     margin-top: 3px;
-}
-.file-type{
     font-size: 14px;
-    margin: 6px;
 }
 
-.upload-file{
-    width: 20.1rem;
+#upload-icon{
+    cursor: pointer;
+}
+
+#remove-logo{
+    cursor: pointer;
+}
+
+.file-type {
+    font-size: 12px;
+}
+
+#upload-file {
+    position: relative;
+    transition: .2s linear;
+    width: 23rem;
     height: 3.2rem;
     display: flex;
     align-items: center;
@@ -107,20 +93,117 @@
     color: white;
 }
 
-.upload-icon{
-    background: var(--upload-border);
+#upload {
+    display: none;
+    margin: auto;
 }
 
-.upload-logo-text{
+#upload-logo-text {
     margin: auto;
-    background: var(--upload-border);
-    text-align: center;
     font-weight: bold;
 }
 
+#logo {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: cover;
+    width: 4rem;
+    height: 1rem;
+    position: absolute;
+}
+
+#loader {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    height: 4rem;
+    animation: spin 1s linear infinite;
+}
+
+#small-loader {
+    display: none;
+    filter: invert(93%) sepia(93%) saturate(28%) hue-rotate(116deg) brightness(108%) contrast(106%);
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    height: 1.5rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 
 
+@media (max-width:992px) {
+    .content {
+        flex-direction: column;
+    }
 
+    .image-section {
+        margin-bottom: 100px;
+        order: 2;
+    }
 
+    .customize-section {
+        margin-top: 1.5rem;
+        order: 1;
+    }
 
+    #umbrella-image {
+        height: 18rem;
+    }
 
+    .heading {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .color-icon {
+        text-align: center;
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .upload-section {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .upload-section p {
+        text-align: center;
+        margin-top: 3px;
+        font-size: 14px;
+    }
+
+    .file-type {
+        font-size: 10px;
+    }
+    #upload-file{
+        width: 20rem;
+    }
+}
