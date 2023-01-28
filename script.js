@@ -69,9 +69,15 @@ imgInput.addEventListener("change", function () {
     const reader = new FileReader()
     reader.addEventListener("load", () => {
         uploadedImage = reader.result
-        document.getElementById('logo').style.backgroundImage = `url(${uploadedImage})`
+        if(this.files[0].size > 5242880 ){
+            alert("File is too big")
+            this.value=""
+        }else{
+            document.getElementById('logo').style.backgroundImage = `url(${uploadedImage})`
+        }
     })
     reader.readAsDataURL(this.files[0])
+    
 })
 
 // Remove logo

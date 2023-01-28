@@ -50,19 +50,19 @@
         <!-- Upload logo -->
         <div class="upload-section">
           <h4>Customize your umbrella</h4>
-          <p>Upload a logo for an instant preview</p>
+          <p>Upload a logo for an instant preview.</p>
           <p class="file-type">.png and .jpg file only. Max file size is 5MB.</p>
           <div id="upload-file">
             <img id="small-loader" src="assets/images/loader_icon.svg" alt="" srcset="">
             <label for="upload">
               <i id="upload-icon" class="fa-solid fa-arrow-up-from-bracket"></i>
             </label>
-            <input id="upload" type="file" accept="image/x-png,image/gif,image/jpeg,image/jpg" onchange="uploadLogo()">
+            <input id="upload" type="file" accept="image/png, image/jpg" onchange="uploadLogo()">
             <p id="upload-logo-text">UPLOAD LOGO</p>
             <i id="remove-logo" style="display: none;" onclick="removeLogo()" class="fa-solid fa-xmark"></i>
           </div>
         </div>
-        
+
       </div>
     </div>
   </section>
